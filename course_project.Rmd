@@ -1,0 +1,58 @@
+---
+title: "Developing Data Products - Week 2 Course Project"
+author: "Ruzaini Amiraa Roslan"
+date: "9/13/2020"
+output: html_document
+---
+
+# Overview
+This markdown is created as part of the Week 2 course project on Coursera's Developing Data Products. This will implement the use of the R package leaflet to display the map of public universities in Malaysia.
+
+# Map of Public Universities in Malaysia
+
+```{r echo=TRUE}
+library(leaflet)
+map <- leaflet() %>% 
+  addTiles() %>% 
+  addMarkers(lat = 3.120833, lng = 101.656389, 
+             popup = "University of Malaya") %>%
+  addMarkers(lat = 5.3559337, lng = 100.300329, 
+             popup = "University of Science Malaysia") %>%
+  addMarkers(lat = 3.2504767,lng = 101.7324808,
+             popup = "International Islamic University Malaysia")%>%
+  addMarkers(lat = 5.998748, lng = 102.3988639,
+             popup = "University of Malaysia Kelantan")%>%
+  addMarkers(lat = 2.9305329, lng = 101.7765287,
+             popup = "National University of Malaysia")%>%
+  addMarkers(lat = 3.5437018, lng = 103.4267173,
+             popup = "University of Malaysia Pahang")%>%
+  addMarkers(lat = 6.4619753, lng = 100.3481531,
+             popup = "University of Malaysia Perlis")%>%
+  addMarkers(lat = 6.0308627, lng = 116.1143136,
+             popup = "University of Malaysia Sabah")%>%
+  addMarkers(lat = 1.4649241,lng = 110.4250296,
+             popup = "University of Malaysia Sarawak")%>%
+  addMarkers(lat = 5.4051765,lng = 103.0854309,
+             popup = "University of Malaysia Terengganu")%>%
+  addMarkers(lat = 3.685019, lng = 101.5218973,
+             popup = "Sultan Idris Education University")%>%
+  addMarkers(lat = 3.0509734, lng = 101.7229484,
+             popup = "National Defence University of Malaysia")%>%
+  addMarkers(lat = 2.99932, lng = 101.7057503,
+             popup = "Putra University Malaysia")%>%
+  addMarkers(lat = 2.844204, lng = 101.7797013,
+             popup = "Islamic Science University of Malaysia")%>%
+  addMarkers(lat = 5.3988213, lng = 103.0753039,
+             popup = "Sultan Zainal Abidin University")%>%
+  addMarkers(lat = 2.3049279, lng = 102.3147432,
+             popup = "Technical University of Malaysia Malacca")%>%
+  addMarkers(lat = 1.5599512, lng = 103.6339716,
+             popup = "University of Technology Malaysia")%>%
+  addMarkers(lat = 3.069724, lng = 101.5014839,
+             popup = "MARA University of Technology")%>%
+  addMarkers(lat = 1.8588379, lng = 103.0819229,
+             popup = "Tun Hussein Onn University of Malaysia")%>%
+  addMarkers(lat = 6.4575096, lng = 100.5032431,
+             popup = "Northern University of Malaysia")
+map
+```
